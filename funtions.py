@@ -1,37 +1,41 @@
 import math
 
+#this function take an string in base 256 and convert it to base 10
 def ConvertToInt(message_str):
-    res = 0
+    numBase10 = 0
     for i in range(len(message_str)):
-        res = res * 256 + ord(message_str[i])
-    return res
+        numBase10 = numBase10 * 256 + ord(message_str[i])
+    return numBase10
+
+#this function take an string in base 256 and max block size and convert it to an array of base 10 number x <= max block size
 def ConvertToIntBlocks(message_str,mxBlockSize):
     res = 0
-    ret = []
+    arr = []
     for i in range(len(message_str)):
         if(res*256+ord(message_str[i])<=mxBlockSize):
             res = res * 256 + ord(message_str[i])
         else:
-            ret.append(res)
+            arr.append(res)
             res = ord(message_str[i])
     if(res):
-        ret.append(res)
-    return ret
+        arr.append(res)
+    return arr
 
+#this function take an int in base 10 and convert it to string base 256
 def ConvertToStr(n):
-    res = ""
+    str = ""
     while n > 0:
-        res += chr(n % 256)
+        str += chr(n % 256)
         n //= 256
-    return res[::-1]
+    return str[::-1]
 
-
+#sample GCD funtion
 def GCD(a, b):
     if b == 0:
         return a
     return GCD(b, a % b)
 
-
+#sample ExtendedEuclid funtion
 def ExtendedEuclid(a, b):
     if b == 0:
         return (1, 0)
