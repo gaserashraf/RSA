@@ -3,7 +3,7 @@
 RSA Encryption & Decryption implementation.
 <p align="center">
   <a href="" rel="noopener">
- <img width=100% src="screenshots/cover.jpg" alt="logo"></a>
+ <img width=70% src="screenshots/cover.jpg" alt="logo"></a>
 </p>
 ## 🏁 Get Started <a name = "Install"></a>
 
